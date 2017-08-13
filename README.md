@@ -32,7 +32,7 @@ dependencies {
 
 ### How to use
 
-If use `SharedPreferences`:
+If use [`SharedPreferences`](https://developer.android.google.cn/reference/android/content/SharedPreferences.html):
 
 ```
 SharedPreferences sharedPreferences = context.getSharedPreferences(context

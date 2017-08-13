@@ -32,28 +32,47 @@ dependencies {
 
 ### How to use
 
+If use `SharedPreferences`:
+
+```
+SharedPreferences sharedPreferences = context.getSharedPreferences(context
+    .getPackageName(), Context.MODE_PRIVATE);
+SharedPreferences.Editor editor = sharedPreferences.edit();
+editor.putString("user", "By_syk");
+editor.apply();
+```
+
+Now, use `SP`:
+
 ```
 SP sp = new SP(context);
 ```
 
-IN
++ Save
 
-```java
-sp.save("user", "By_syk");
-sp.put("num", 5)
-    .put("valid", true)
-    .save();
-sp.delete("user");
-sp.remove("num")
-    .remove("valid")
-    .save();
-```
+  ```java
+  sp.save("user", "By_syk");
 
-OUT
+  sp.put("num", 5)
+      .put("valid", true)
+      .save();
+  ```
 
-```java
-String user = sp.getString("user");
-```
++ Delete
+
+  ```
+  sp.delete("user");
+  
+  sp.remove("num")
+      .remove("valid")
+      .save();
+  ```
+
++ Get
+
+  ```java
+  String user = sp.getString("user");
+  ```
 
 
 ### Demo APP
